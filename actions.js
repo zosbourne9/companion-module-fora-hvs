@@ -1,9 +1,11 @@
 let protocol_hvs100 = require('./protocol_hvs100')
 let protocol_hvs2000 = require('./protocol_hvs2000')
+let protocol_hvs390 = require('./protocol_hvs390') // <-- Add this
 
 let protocol = {
 	...protocol_hvs100,
 	...protocol_hvs2000,
+	...protocol_hvs390,
 }
 
 module.exports = {
@@ -277,6 +279,11 @@ module.exports = {
 		// HVS2000 Local Events
 		else if ((aux = key.match('^ME([1-3])_EVENT_LASTRECALL_NO$')) !== null) {
 			key = `me_${aux[1]}_event_recall`
+		}
+		// HVS390 Events
+		else if ((aux = key.match('^M([1-3])K([1-4])_KEYONAIR$')) !== null) {
+		key = `me_${aux[1]}_key_${aux[2]}` // aux[1] will be the ME number
+		value = value === '0' ? 'off' : 'on'
 		}
 		// HVS100 & HVS2000 ME Keys
 		else if ((aux = key.match('^M([1-3])K([1-4])_KEYONAIR$')) !== null) {
