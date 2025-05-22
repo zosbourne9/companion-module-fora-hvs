@@ -3,9 +3,9 @@ let protocol_hvs2000 = require('./protocol_hvs2000')
 let protocol_hvs390 = require('./protocol_hvs390') // <-- Add this
 
 let protocol = {
-	...protocol_hvs100,
-	...protocol_hvs2000,
-	...protocol_hvs390,
+    ...protocol_hvs100,
+    ...protocol_hvs2000,
+    ...protocol_hvs390,
 }
 
 module.exports = {

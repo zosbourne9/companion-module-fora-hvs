@@ -24,7 +24,7 @@ class instance extends instance_skel {
 		this.MODELS = [
 			{ id: 'HVS100', label: 'HVS 100/110' },
 			{ id: 'HVS2000', label: 'HVS 2000' },
-		    { id: 'HVS390', label: 'HVS 390' }, // <-- Add this
+			{ id: 'HVS390HS', label: 'HVS 390HS' },
 		]
 
 		this.reconnecting = null

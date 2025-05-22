@@ -1,6 +1,6 @@
 {
 	"name": "fora-hvs",
-	"version": "1.2.6",
+    "version": "1.2.7",
 	"description": "For.A Hanabi Video Switcher module for Companion.",
 	"main": "index.js",
 	"scripts": {
@@ -13,7 +13,7 @@
 	],
 	"manufacturer": "For.A",
 	"product": "Hanabi Video Switchers",
-	"shortname": "fora-hvs",
+	"shortname": "fora-hvs-test",
 	"homepage": "https://github.com/bitfocus/companion-module-fora-hvs#readme",
 	"bugs": {
 		"url": "https://github.com/bitfocus/companion-module-fora-hvs/issues"
